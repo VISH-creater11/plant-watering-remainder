@@ -68,4 +68,4 @@ User inputs → Lambda → EventBridge → Reminder check → SNS email → UI u
 
 ---
 
-## 📁 Folder Structure
+
