@@ -1,0 +1,40 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; } body { background: radial-gradient(circle at top left, #081c15, #1b4332 60%, #081c15); min-height: 100vh; display: flex; justify-content: center; align-items: flex-start; color: #f0fdf4; overflow-x: hidden; } .container { width: 90%; max-width: 1100px; margin-top: 3rem; } .header { text-align: center; margin-bottom: 2.5rem; } .header h1 { font-size: 2.5rem; color: #80ed99; letter-spacing: 1px; text-shadow: 0 0 15px rgba(128, 237, 153, 0.3); } .header p { font-size: 1rem; color: #b7e4c7; opacity: 0.9; } /* Stats Cards */ .stats { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 3rem; } .card { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 1.5rem 2rem; text-align: center; width: 200px; box-shadow: 0 0 15px rgba(128, 237, 153, 0.2); backdrop-filter: blur(12px); transition: 0.3s ease; } .card:hover { transform: translateY(-8px); box-shadow: 0 0 25px rgba(128, 237, 153, 0.4); } .card h3 { font-weight: 500; color: #b7e4c7; margin-bottom: 8px; } .card p { font-size: 1.8rem; font-weight: 600; } .total p { color: #80ed99; } .due p { color: #ffb703; } .overdue p { color: #ef233c; } /* Table */ .table-section { background: rgba(255, 255, 255, 0.06); border-radius: 15px; padding: 1.5rem; backdrop-filter: blur(10px); box-shadow: 0 0 20px rgba(0,0,0,0.3); } .table-section h2 { text-align: center; margin-bottom: 1rem; color: #80ed99; } table { width: 100%; border-collapse: collapse; color: #e6ffee; text-align: center; } th, td { padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); } th { color: #95d5b2; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; background: rgba(255, 255, 255, 0.05); } tr:hover { background-color: rgba(128, 237, 153, 0.1); } /* Floating Add Button */ #addPlantBtn { position: fixed; bottom: 40px; right: 40px; width: 60px; height: 60px; border: none; border-radius: 50%; background: linear-gradient(145deg, #52b788, #40916c); color: white; font-size: 2rem; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s ease; } #addPlantBtn:hover { transform: scale(1.1) rotate(5deg); box-shadow: 0 8px 25px rgba(82, 183, 136, 0.5); } /* 🌿 Add Plant Modal */ .plant-modal { border: none; border-radius: 16px; padding: 24px 28px; background: #ffffff; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); width: 320px; font-family: "Poppins", sans-serif; } .plant-modal h2 { margin-bottom: 16px; font-size: 20px; color: #2c7a7b; } .plant-modal label { display: block; margin-bottom: 12px; color: #333; font-weight: 500; } .plant-modal input { width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #ccc; margin-top: 4px; font-size: 14px; } .plant-modal menu { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; } .btn.primary { background-color: #2c7a7b; color: white; border: none; } .btn.primary:hover { background-color: #319795; }
+/* Existing CSS unchanged above */
+
+.plant-modal select,
+.plant-modal input[type="time"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+/* Button for "Watered Today" reset */
+.watered-btn {
+  background-color: #52b788;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.watered-btn:hover {
+  background-color: #40916c;
+}
+.delete-btn {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.delete-btn:hover {
+  background-color: #d90429;
+}

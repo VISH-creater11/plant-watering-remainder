@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌿 Smart Plant Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🌱 Smart Plant Monitor</h1>
+      <p>Track, nurture, and grow — beautifully.</p>
+    </header>
+
+    <section class="stats">
+      <div class="card total">
+        <h3>Total Plants</h3>
+        <p id="totalPlants">0</p>
+      </div>
+      <div class="card due">
+        <h3>Due Today</h3>
+        <p id="dueToday">0</p>
+      </div>
+      <div class="card overdue">
+        <h3>Overdue</h3>
+        <p id="overdue">0</p>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h2>Your Plants</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Interval</th>
+            <th>Last Watered</th>
+            <th>Next Due</th>
+            <th>Status</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="plantList"></tbody>
+      </table>
+    </section>
+
+    <button id="addPlantBtn" class="floating-btn">+</button>
+  </div>
+
+  <!-- 🌿 Add Plant Modal -->
+  <dialog id="addPlantModal" class="plant-modal">
+    <form id="addPlantForm" method="dialog">
+      <h2>Add New Plant 🌱</h2>
+
+      <label>Plant Name
+        <input type="text" id="plantName" required>
+      </label>
+
+      <label>Watering Interval (days)
+        <input type="number" id="plantInterval" min="1" required>
+      </label>
+
+      <label>Email
+        <input type="email" id="plantEmail" placeholder="you@example.com">
+      </label>
+
+      <label>Phone
+        <input type="tel" id="plantPhone" placeholder="+91xxxxxxxxxx">
+      </label>
+
+      <label>Did you water it today?
+        <select id="plantWateredToday" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+
+      <label>Preferred watering reminder time
+        <input type="time" id="plantTime" required>
+      </label>
+
+      <menu>
+        <button type="submit" class="btn primary">Add Plant</button>
+        <button type="button" class="btn" id="cancelAdd">Cancel</button>
+      </menu>
+    </form>
+  </dialog>
+</body>
+</html>
